@@ -1,7 +1,7 @@
 # State Machine
 _Yet another state-related package_
 
-State machine allows you to share value across all components through the usage of ``Slot``. Each ``Slot`` can watch for any changes in value (either by changing its internal value or from binded slot). You can also apply **transformations** to a slot (see below).
+State machine allows you to share value across all components through the usage of ``Slot``. Each ``Slot`` can watch for any changes in value (either by changing its internal value or from binded slot).
 
 ## Example
 ```ts

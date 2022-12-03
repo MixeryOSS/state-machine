@@ -1,4 +1,4 @@
-run-name: ${{ github.actor }}: Push
+run-name: '${{ github.actor }}: Push'
 on:
   push:
     paths-ignore:

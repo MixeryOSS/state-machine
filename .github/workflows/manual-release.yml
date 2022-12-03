@@ -19,4 +19,4 @@ jobs:
       - name: Configure npm and publish package
         run: |
           npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_PUBLISH_TOKEN }}
-          npm publish
+          npm publish --access public

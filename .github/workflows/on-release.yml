@@ -1,6 +1,6 @@
 run-name: '${{ github.actor }}: Release'
 on:
-  releases:
+  release:
     type: [created]
 jobs:
   build:

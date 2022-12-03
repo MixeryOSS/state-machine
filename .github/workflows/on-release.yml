@@ -1,0 +1,24 @@
+run-name: '${{ github.actor }}: Release'
+on:
+  release:
+    type: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install TypeScript compiler and other packages
+        run: |
+          npm install -g typescript
+          npm install
+      - name: Compile TypeScript files
+        run: tsc -b
+      - name: Publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

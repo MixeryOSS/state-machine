@@ -1,7 +1,0 @@
-/.github
-/src
-/tsconfig.json
-/dist/test.js
-/dist/tsconfig.tsbuildinfo
-**.swp
-

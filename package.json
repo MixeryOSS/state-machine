@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Yet another state-related package",
   "main": "dist/index.js",
+  "files": [
+      "/dist/**.js",
+      "/dist/**.d.ts",
+      "!/dist/test*"
+  ],
   "type": "module",
   "scripts": {
     "test": "node dist/test.js"

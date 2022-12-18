@@ -21,3 +21,6 @@ console.log(5, slot.value, slot2.value);
 
 slot.value = "independent 1";
 console.log(6, slot.value, slot2.value);
+
+let slot3 = new Slot("slot 3").from(slot);
+console.log(7, slot3.value, slot3.value == slot.value);

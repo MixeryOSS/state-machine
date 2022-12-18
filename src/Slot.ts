@@ -22,6 +22,12 @@ export class Slot<T> implements ISlot<T> {
         }
     }
 
+    public from(from: ISlot<T> | T) {
+        if (typeof from == "object" && "value" in from) this.bindFrom(from);
+        else this.value = from;
+        return this;
+    }
+
     public bindFrom(from: ISlot<T>): this {
         let oldV = this.value, newV: T;
 
